@@ -1,0 +1,801 @@
+{
+	"info": {
+		"_postman_id": "35302f09-fb5a-47a0-9b1c-026a06d6ccc1",
+		"name": "cis4339_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Create client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"middle_name\": null,\n    \"birthday\": \"06/12/1946\",\n    \"ssn\": \"000-00-0000\",\n    \"gender\": \"Male\",\n    \"phone_number\": \"123-456-7890\",\n    \"email\": \"johndoe46@mlc.com\",\n    \"language\": \"English\",\n    \"race\": \"Asian\",\n    \"is_65_or_older\": true,\n    \"is_veteran\": true,\n    \"highest_education_completed\": \"High School\",\n    \"is_Employed\": false,\n    \"drivers_license\": null,\n    \"is_getting_vaccine\": false,\n    \"is_vaccinated\": true,\n    \"vaccine_preference\": null,\n    \"address\": {\n      \"Address\": \"4800 Calhoun Rd\",\n      \"City\": \"Houston\",\n      \"State\": \"Texas\",\n      \"County\": \"Harris\",\n      \"zip\": \"77004\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/clients",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get client by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/clients/5bfba3a0-9b80-11ec-b4ae-e746b1722559",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clients",
+								"5bfba3a0-9b80-11ec-b4ae-e746b1722559"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/clients",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Johny\",\n    \"last_name\": \"Doey\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/clients/5bfba3a0-9b80-11ec-b4ae-e746b1722559",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clients",
+								"5bfba3a0-9b80-11ec-b4ae-e746b1722559"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/clients/5bfba3a0-9b80-11ec-b4ae-e746b1722559",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clients",
+								"5bfba3a0-9b80-11ec-b4ae-e746b1722559"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Organizations",
+			"item": [
+				{
+					"name": "Get all organizations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/organizations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"organizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get organization by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/organizations/aa7d6b50-9b83-11ec-9673-37de4737d739",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"organizations",
+								"aa7d6b50-9b83-11ec-9673-37de4737d739"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Organization",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"organization_name\": \"Red Cross\",\n    \"organization_desc\": \"The Red Cross provides help to people in need\",\n    \"Address\":\n    {\n        \"Address\": \"4800 Calhoun Rd\",\n      \"City\": \"Houston\",\n      \"State\": \"Texas\",\n      \"County\": \"Harris\",\n      \"zip\": \"77004\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/organizations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"organizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Organization",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"organization_name\": \"Blue Cross\",\n    \"organization_desc\": \"Blue Cross does not provide help to people in need\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/organizations/aa7d6b50-9b83-11ec-9673-37de4737d739",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"organizations",
+								"aa7d6b50-9b83-11ec-9673-37de4737d739"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Organization",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/organizations/aa7d6b50-9b83-11ec-9673-37de4737d739",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"organizations",
+								"aa7d6b50-9b83-11ec-9673-37de4737d739"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Create an event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event_name\": \"Food Drive\",\n    \"event_description\": \"A food drive to help people in need\",\n    \"program_type\": \"Food\",\n    \"date\": \"03/07/2022\",\n    \"address\": {\n        \"Address\": \"4800 Calhoun Rd\",\n      \"City\": \"Houston\",\n      \"State\": \"Texas\",\n      \"County\": \"Harris\",\n      \"zip\": \"77004\"\n    },\n    \"organization_id\": \"b261d910-9b87-11ec-bf4e-45fa14d63f8e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/events",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/events",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get event by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/events/4b07c260-9b88-11ec-98a1-6573f0b9f63b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events",
+								"4b07c260-9b88-11ec-98a1-6573f0b9f63b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event_name\": \"HEB Food Drive\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/events/4b07c260-9b88-11ec-98a1-6573f0b9f63b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events",
+								"4b07c260-9b88-11ec-98a1-6573f0b9f63b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add client to event",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/events/4b07c260-9b88-11ec-98a1-6573f0b9f63b/client/12315151234123412",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events",
+								"4b07c260-9b88-11ec-98a1-6573f0b9f63b",
+								"client",
+								"12315151234123412"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add worker to an event",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/events/4b07c260-9b88-11ec-98a1-6573f0b9f63b/worker/12315151234123412",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events",
+								"4b07c260-9b88-11ec-98a1-6573f0b9f63b",
+								"worker",
+								"12315151234123412"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Event",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/events/4b07c260-9b88-11ec-98a1-6573f0b9f63b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"events",
+								"4b07c260-9b88-11ec-98a1-6573f0b9f63b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Workers",
+			"item": [
+				{
+					"name": "Create worker",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/workers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"workers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all workers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/workers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"workers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get worker by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/workers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"workers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update worker",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Jon\",\n    \"last_name\": \"Snowy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/workers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"workers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete workers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/workers/3edff6e0-9b8a-11ec-8d71-29d919518f0f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"workers",
+								"3edff6e0-9b8a-11ec-8d71-29d919518f0f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Actvity",
+			"item": [
+				{
+					"name": "Create an activity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"client_id\": \"3e2dd300-9b8c-11ec-bea9-23b77b969694\",\n    \"event_id\": \"56ec82b0-9b8c-11ec-bea9-23b77b969694\",\n    \"short_notes\": \"Client enjoyed their time at the event\",\n    \"time_spent\": 0.75\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/activity",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get activity by event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/activity/event/56ec82b0-9b8c-11ec-bea9-23b77b969694",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activity",
+								"event",
+								"56ec82b0-9b8c-11ec-bea9-23b77b969694"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"item": [
+				{
+					"name": "Create Health for a client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"client_id\": \"3e2dd300-9b8c-11ec-bea9-23b77b969694\",\n    \"has_Health_Insurance\": false,\n    \"has_Food_Stamps\": true,\n    \"food_Stamps_Amount\": 500,\n    \"food_Stamps_Reason\": \"Low income\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/health",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Health for a client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/health/3e2dd300-9b8c-11ec-bea9-23b77b969694",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"health",
+								"3e2dd300-9b8c-11ec-bea9-23b77b969694"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update health for a client",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"food_Stamps_Amount\": 750\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/health/3e2dd300-9b8c-11ec-bea9-23b77b969694",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"health",
+								"3e2dd300-9b8c-11ec-bea9-23b77b969694"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Income",
+			"item": [
+				{
+					"name": "Create income for a client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"client_id\": \"3e2dd300-9b8c-11ec-bea9-23b77b969694\",\n    \"is_head_of_household\": true,\n    \"monthly_Income\": 2300,\n    \"tanf\": 569,\n    \"social_Security\": 200\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/income",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"income"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update income for client",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"client_id\": \"3e2dd300-9b8c-11ec-bea9-23b77b969694\",\n    \"is_head_of_household\": true,\n    \"has_Food_Stamps\": true,\n    \"monthly_Income\": 2700,\n    \"tanf\": 569,\n    \"social_Security\": 200\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/income/3e2dd300-9b8c-11ec-bea9-23b77b969694",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"income",
+								"3e2dd300-9b8c-11ec-bea9-23b77b969694"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get income for a client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/income/3e2dd300-9b8c-11ec-bea9-23b77b969694",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"income",
+								"3e2dd300-9b8c-11ec-bea9-23b77b969694"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "External API",
+			"item": [
+				{
+					"name": "Get Client by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/external/Fiona/Smith/987-3595-89",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"external",
+								"Fiona",
+								"Smith",
+								"987-3595-89"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all external clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/external",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"external"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
